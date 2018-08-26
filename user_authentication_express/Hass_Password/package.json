@@ -1,0 +1,15 @@
+{
+  "name": "treehouse-hashing-practice",
+  "version": "1.0.0",
+  "description": "A project for practicing password hashing.",
+  "author": "Iftekhar A Chowdhury",
+  "private": true,
+  "scripts": {
+    "start": "node ./bcrypt"
+  },
+  "dependencies": {
+    "bcrypt": "^0.8.7",
+    "node": "^10.8.0"
+  },
+  "license": "MIT"
+}
