@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Phrase Sayer</title>
+  </head>
+  <body>
+    <p><input type="text" id="phraseText"></p>
+    <p><button id="sayPhrase">Say Phrase</button></p>
+    <script>
+    
+        let button = document.getElementById('sayPhrase');
+        let input = document.getElementById('phraseText');
+
+        button.addEventListener('click', () => {
+          alert(input.value);
+        });
+    </script>
+  </body>
+</html>
