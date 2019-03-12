@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Closures</title>
+<style>
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 12px;
+    }
+
+    h1 {
+      font-size: 1.5em;
+    }
+    h2 {
+      font-size: 1.2em;
+    }
+</style>
+</head>
+<body>
+    <p>Some paragraph text</p>
+    <h1>some heading 1 text</h1>
+    <h2>some heading 2 text</h2>
+    
+    <p> Click to change the font size &nbsp;
+        <a href="#" id="size-18">18</a>&nbsp;
+        <a href="#" id="size-24">24</a>&nbsp;
+        <a href="#" id="size-32">32</a>
+    </p>    
+    
+	<script>
+        function makeSizer(size) {
+              return function() {
+                document.body.style.fontSize = size + 'px';
+              };
+            }
+
+            var size18 = makeSizer(18);
+            var size24 = makeSizer(24);
+            var size32 = makeSizer(32);
+
+            document.getElementById('size-18').onclick = size18;
+            document.getElementById('size-24').onclick = size24;
+            document.getElementById('size-32').onclick = size32;
+    </script>
+</body>
+</html>
