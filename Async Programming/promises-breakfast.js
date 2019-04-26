@@ -4,17 +4,20 @@
   2. Fulfilled - operation successful
   3. Rejected - operation failed
 */
-
+const order = false;
 const breakfastPromise = new Promise((resolve, reject) => {
     setTimeout(()=> {
-        resolve('Your breakfast is ready. Come and get it.');
+       if(order){
+           resolve('Your breakfast is ready. Come and get it.');
+       } else {
+            reject( Error('Oh no! An error occured with your order.'));
+       }
+       
 
     }, 3000);
 });
 console.log(breakfastPromise);
 
-breakfastPromise.then( msg => console.log(msg));
-
-// Output
-// Promise { <pending> }
-// Your breakfast is ready. Come and get it.
+breakfastPromise
+    .then(msg => console.log(msg))
+    .catch(err => console.log(err));
